@@ -1,4 +1,27 @@
+//
+// Electric Imp Christmas Tree Star
+//
+// Code derived from: https://github.com/jamesjnadeau/ws2801_electircimp
+//
+// planned patterns:
+// o rainbow star
+// o rainbow points
+// o single color - net chosen
+// o color fade pattern - net chosen
+// o white sparkle - foreground & background color chosen
+// o snow fall - foreground & background color chosen
+// o day/night tracker
+//   o stars/shooting stars at night?
+//   o sun tracking?
+//   o weather tracking? (snow, rainy, sunny, cloudy?)
+// o fire glow (base color chooseable)
 
+local cache = null;
+local frames_count = 0;
+local count = 0;
+local numPixels = 12;
+local writeWait = 0.1;
+local rainbow_count = 0;
 
 //****************************************************************************
 //
@@ -50,14 +73,6 @@ function hexToInteger(hex) {
 
     return result;
 }
-
-local cache = null;
-local frames_count = 0;
-local count = 0;
-local numPixels = 12;
-local writeWait = 0.1;
-
-local rainbow_count = 0;
 
 //****************************************************************************
 //
