@@ -918,8 +918,10 @@ class ExpGPIO {
 //****************************************************************************
 //
 // A random floating point number between 0 and 1.
+local mrand = math.rand.bindenv(math);
+
 function random() {
-  return 1.0 * math.rand() / RAND_MAX;
+  return 1.0 * mrand() / RAND_MAX;
 }
 
 //****************************************************************************
